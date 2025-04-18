@@ -1,23 +1,11 @@
 apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: me-group 
-  description: Just me
-spec:
-  type: team
-  children: []
-  profile:
-    displayName: Just me 
-  members:
-    - lytt925 
----
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: test-backstage-1 
   description: Test Repo for backstage registration
   annotations:
     github.com/project-slug: lytt925/test-backstage-1
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: user:lytt925
