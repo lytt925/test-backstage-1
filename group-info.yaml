@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: me-group 
+  description: Just me
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Just me 
+  members:
+    - lytt925 
