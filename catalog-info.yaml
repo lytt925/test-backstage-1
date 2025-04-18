@@ -8,8 +8,9 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
-  owner: user:lytt925
+  owner: group:my-group
   lifecycle: production
+  system: my-system
   providesApis:
     - test-backstage-1-api
 ---
@@ -25,6 +26,7 @@ metadata:
 spec:
   type: raw-openapi
   lifecycle: production
-  owner: user:lytt925
+  owner: group:my-group
+  system: my-system
   definition:
     $text: ./docs/openapi.yaml
