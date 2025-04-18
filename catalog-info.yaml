@@ -1,0 +1,42 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: me-group 
+  description: Just me
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Just me 
+  members:
+    - lytt925 
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-backstage-1 
+  description: Test Repo for backstage registration
+  annotations:
+    github.com/project-slug: lytt925/test-backstage-1
+spec:
+  type: service
+  owner: user:lytt925
+  lifecycle: production
+  providesApis:
+    - test-backstage-1-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: test-backstage-1-api 
+  description: All APIs of test-backstage-1
+  links:
+    - url: https://github.com/lytt925/test-backstage-1/tree/main
+      title: GitHub Repo
+      icon: github
+spec:
+  type: raw-openapi
+  lifecycle: production
+  owner: user:lytt925
+  definition:
+    $text: ./docs/openapi.yaml
